@@ -1,4 +1,5 @@
-
+import Icon from '@mdi/react';
+import { mdiArrowLeft } from '@mdi/js';
 
 function Caracters(props) {
    const { characters, setCharacter} = props;
@@ -9,7 +10,9 @@ function Caracters(props) {
   return (
     <div className="character">
        <h1> PERSONAJES </h1> 
-        <span className="back-home" onClick={reset}>volver</span>
+        <button className="back-home" onClick={reset} title="Volver">
+        <Icon path={mdiArrowLeft} size={1} /> 
+        </button>
        <div className="container-characters">
         {characters.map((c, i)=>(
 
